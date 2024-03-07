@@ -9,21 +9,36 @@
     <body>
         <div class="container">
             <div class="clock">
-                <!-- 
+                <!--
+                    Calculate deg move of hands:
 
-                    Hours calc:
+                    # Hours calc:
                     12 hour = 360 deg
                     1 hour = 360/12 = 30 deg
-                    h hour = 30h deg
+                    h hour = 30h + m/2 deg
 
-                    Minuite calc:
-                    60 min = 30 deg
-                    1 min  = 30/60 = 1/2 deg
-                    m min = m/2 deg
+                        __Minuite calc for hour hand:
+                        60 min = 30 deg
+                        1 min  = 30/60 = 1/2 deg
+                        m min = m/2 deg
+
+                    # Minuite calc:
+                    60 min = 360 deg
+                    1 min = 360/60 = 6 deg
+                    m min = 6m deg
+
+                    # Second calc:
+                    60 sec = 360 deg
+                    1 sec = 360/60 = 6 deg
+                    s sec = 6s deg
+
+
                  -->
-                <div style="--clr:#ff3d58" class="hand"><i></i></div>
-                <div style="--clr:#00a6ff" class="hand"><i></i></div>
-                <div style="--clr:#ffffff" class="hand"><i></i></div>
+
+
+                <div style="--clr:#ff3d58; --h: 72px;" id="hour" class="hand"><i></i></div>
+                <div style="--clr:#00a6ff; --h: 84px;" id="min" class="hand"><i></i></div>
+                <div style="--clr:#ffffff; --h: 96px;" id="sec" class="hand"><i></i></div>
                 <!-- This style is used to position the number on the clock face. The variable --i is used to calculate the rotation angle. -->
                 <span style="--i:1;"><b>1</b></span>
                 <span style="--i:2;"><b>2</b></span>
@@ -39,6 +54,8 @@
                 <span style="--i:12;"><b>12</b></span>
             </div>
         </div>
+
+        <script src="script.js"></script>
     </body>
 
 </html>
